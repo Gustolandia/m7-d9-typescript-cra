@@ -1,9 +1,5 @@
 import React from 'react'
-
-interface HeaderProps {
-  title: string
-  subTitle?: string
-}
+import { HeaderProps } from '../types/types'
 
 interface HeaderState {
   count: number
@@ -12,6 +8,10 @@ interface HeaderState {
 class Header extends React.Component<HeaderProps, HeaderState> {
   state: HeaderState = {
     count: 0,
+  }
+
+  componentDidMount = () => {
+    console.log('hello')
   }
 
   increaseState = () => this.setState({ count: this.state.count + 1 })

@@ -1,23 +1,15 @@
 import React from 'react'
-import './App.css'
 import Header from './components/Header2'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import DetailComponent from './components/DetailComponent'
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <header className="App-header">
-          <Header title="title!" subTitle="asdsad" />
-          <Route
-            path="/detail"
-            exact
-            render={(routerProps) => <DetailComponent {...routerProps} data={['one', 'two']} />}
-          />
-        </header>
-      </div>
-    </Router>
+    <div style={{color:"coral",backgroundColor: "black", height:"1000px", position:"absolute", top:"0", width:"100%"}}>
+      <Router>
+            <Route path="/" exact render={(routerProps) => <Header {...routerProps} title="title!" subTitle="asdsad" />}
+            />
+      </Router>
+    </div>
   )
 }
 
